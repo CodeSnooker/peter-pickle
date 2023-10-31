@@ -1,0 +1,60 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Oct 11 14:52:47 2023
+
+@author: arash.tayyebifff
+"""
+
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+  <!-- Make it compatible to mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Heart Disease Percent</title>
+  
+</head>
+
+<body style="background: #000;">
+ <div class="login">
+	<h1 style="color:Violet;">Alshami's Group prediction</h1>
+
+     <!-- Action is where the data is sent. In our case, predict page.
+     If action is omitted, it assumed to be the current page -->
+    <form action="{{ url_for('predict')}}"method="post">
+    <input type="text" name="pH" placeholder="pH" required="required" /><p>
+    <input type="text" name="ICP_Al" placeholder="ICP_Al" required="required" /><p>
+    <input type="text" name="ICP_B" placeholder="ICP_B" required="required" /><p>
+    <input type="text" name="Ba" placeholder="Ba" required="required" /><p>
+    <input type="text" name="ICP_HCO3" placeholder="ICP_HCO3" required="required" /><p>
+    <input type="text" name="ICP_Ca" placeholder="ICP_Ca" required="required" /><p>
+    <input type="text" name="ICP_Cl" placeholder="ICP_Cl" required="required" /><p>
+    <input type="text" name="ICP_Cu" placeholder="ICP_Cu" required="required" /><p>
+    <input type="text" name="ICP_Fe" placeholder="ICP_Fe" required="required" /><p>
+    <input type="text" name="ICP_K" placeholder="ICP_K" required="required" /><p>
+    <input type="text" name="ICP_Mg" placeholder="ICP_Mg" required="required" /><p>
+    <input type="text" name="ICP_Mn" placeholder="ICP_Mn" required="required" /><p>
+    <input type="text" name="ICP_Na" placeholder="ICP_Na" required="required" /><p>
+    <input type="text" name="ICP_Pb" placeholder="ICP_Pb" required="required" /><p>
+    <input type="text" name="ICP_S" placeholder="ICP_S" required="required" /><p>
+    <input type="text" name="ICP_Sulfate" placeholder="ICP_Sulfate" required="required" /><p>
+    <input type="text" name="ICP_Si" placeholder="ICP_Si" required="required" /><p>
+    <input type="text" name="ICP_Sr" placeholder="ICP_Sr" required="required" /><p>
+    <input type="text" name="ICP_Zn" placeholder="ICP_Zn" required="required" /><p>
+       
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict potential Scales</button></p>
+    </form>
+
+   <br>
+   <br>
+   <h4 style="color:Violet;">
+   {{ prediction_text }} </h4>
+
+ </div>
+
+
+</body>
+</html>
